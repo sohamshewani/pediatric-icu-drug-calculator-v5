@@ -1,0 +1,6 @@
+#!/bin/bash
+
+# Build the project
+make
+
+cmake -E chdir bin ./pediatric-icu-drug-calculator-test

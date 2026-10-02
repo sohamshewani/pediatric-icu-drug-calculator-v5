@@ -1,0 +1,14 @@
+#include <iostream>
+#include "dosage_calculator.h"
+#include "drug_data.h"
+
+int main() {
+    std::cout << "Pediatric ICU Drug Calculator" << std::endl;
+    // Example usage
+    DrugData drug_data = DrugData::loadFromFile("drug_data.json");
+    DosageCalculator calculator = DosageCalculator(drug_data);
+    double weight = 10.5; // Example weight in kg
+    double dosage = calculator.calculateDosage(weight);
+    std::cout << "Dosage for 10.5 kg: " << dosage << " mg" << std::endl;
+    return 0;
+}
